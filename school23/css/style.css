@@ -1,0 +1,512 @@
+/* @import url("reset.css"); */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,700&display=swap);
+/* @import url(https://fonts.googleapis.com/css?family=Hind+Siliguri:regular,500,700,800&display=swap); */
+
+@font-face {
+    font-weight: 400; /*  normal */
+    font-family:Hind Siliguri;
+    src: url("../fonts/HindSiliguri-Regular.ttf");
+}
+@font-face {
+    font-weight: 700; /*  bold */
+    font-family:Hind Siliguri;
+    src: url("../fonts/HindSiliguri-Bold.ttf");
+}
+@font-face {
+    font-weight: 600; /*  semibold */
+    font-family:Hind Siliguri;
+    src: url("../fonts/HindSiliguri-SemiBold.ttf");
+}
+/* @font-face {
+    font-family: Hind Siliguri;
+    font-display: swap;
+    src: url(../fonts/HindSiliguri-Bold.woff), 
+    url(../fonts/HindSiliguri-Light.woff), 
+    url(../fonts/HindSiliguri-Medium.woff), 
+    url(../fonts/HindSiliguri-Regular.woff), 
+    url(../fonts/HindSiliguri-SemiBold.ttf);
+} */
+
+/* ----------------------------------------- обнулення -------- */ 
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: none;
+}
+li{
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+    font-family: Hind Siliguri, sans-serif;
+    /* font-family: Open Sans; */
+    color: #303030;
+}
+html, body {
+    height: 100%;
+    min-width: 320px;
+}
+/* ------------------обгортка-------------------------- */ 
+
+.wrapper{
+    overflow: hidden; /* прибираємо горизонтальний скрол на сайті */
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.page{
+    flex: 1 1 auto;  /* дозволяємо збільшуватися */
+}
+/* ----обмежуючий контейнер------------------------------------------ */
+[class*="__container"] {
+    max-width: 1310px; /* 1280+15+15  */
+    margin: 0 auto;
+    padding: 0px 15px; /* left/right=15 */
+}
+
+/* ------------------------------------------------------HEADER------ */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header__container {
+    padding-top: 5px;    /* відступи безпеки */
+    padding-bottom: 5px;
+    display: flex;
+    gap: 130px;          
+    align-items: center;
+    min-height: 160px;     /* висота до + меню + після - загальний */
+    margin-left: 150px;
+}
+.header__menu {
+    font-family: Hind Siliguri, sans-serif;
+}
+.menu__body {
+    font-size: 24px;
+    line-height: 39px;
+}
+.menu__list {
+    display: flex;
+    /* gap: 40px; */
+    column-gap: 20px;
+    flex-wrap: wrap;
+}
+.menu__link {
+    font-family: Hind Siliguri, sans-serif;
+    color: rgba(104, 104, 104, 1);
+    font-weight: 400;
+}
+.menu__link:hover{
+    color: rgba(35, 35, 35, 1);
+    font-weight: 500;
+}
+
+.decor-main__baner {
+    height: 500px;
+    width: 1440px;
+    left: 0px;
+    top: 165px;
+}
+
+/* --------------------------------------------end-HEADER-------------- */
+
+.main {
+    padding-bottom: 86px;
+}
+/* @media (max-width: 991.98px) {
+    padding-bottom: 560px;
+} */
+/* ===========================TEXT */
+.main__container {
+    display: flex;
+}
+.main-content.title {
+    height: 246px;
+    width: 421px;
+    margin-left: 72px;
+
+    top: 303px;
+    border-radius: 20px;
+    background-color: rgba(217, 217, 217, 1);
+}
+.main-title {
+    font-family: Hind Siliguri, sans-serif;
+    color: #212F39;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+}
+@media (max-width: 1092px) {
+    .main-title{
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36px;
+    }    
+}
+@media (max-width: 737.98){
+    .main-title{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}@media (max-width: 479.98px) {
+    .main-title{
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+}
+
+.main-content{
+    padding: 38px 112px 40px 69px;
+    position: absolute;
+	top: 300px;
+
+	width: 100%;
+}
+   
+.main__decor {
+    /* position: relative; */
+    width: 100%;
+    /* align-self: flex-end; */
+    margin-top: 165px;
+    padding-bottom: 86px;
+}
+
+@media (max-width: 1092px) {
+    .header__container {
+        min-height: 100px;  
+    }
+       .menu__list {
+        gap: 10px;
+    }
+    
+}
+
+ /* -----------------------------------------------------PAGE----------MAIN ---- */
+
+
+h1 {
+    font-family: Hind Siliguri;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: left;
+}
+
+/* -------------------------------------------------------PAGE----------OUR TEACHER---- */
+.teacher__container {
+    display: flex;
+}
+.body-teachers__items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+}
+.teacher-director {
+    /* margin-top: 48px; */
+    position: relative;
+    width: 479px;
+    height: 813px;
+    margin-left: 80px;  /* margin-right: */
+    border-radius: 20px;
+    padding: 76px;
+}
+.teacher-director__name {
+    position: absolute;
+    width: 412px;
+    height: 153px;
+    margin: 25px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    color: rgba(37, 60, 74, 1);
+}
+.title-director_name{
+    font-family: Hind Siliguri, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    padding-top: 34px;
+}
+.teacher-director__name.title-director{
+    height: 153px;
+    width: 412px;
+    margin-left: 25px;
+    margin-top: 605px;
+}
+.title-director__name {
+    font-family: Hind Siliguri, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    padding-top: 34px;
+}
+.teacher-director__foto {
+    margin-right: 35px;
+}
+
+.body-teacher__item.item {
+    width: 340px;
+    height: 468px;
+    background: #F3F5F6;
+    border-radius: 10px;
+}
+.item__foto {
+    position: relative;
+    border-radius: 20px;
+    width: 243px;
+    height: 272px;
+    margin-bottom: 25px;
+    padding-left: 47px;
+    padding-top: 23px;
+    
+}
+.item__name, .item__position, .item__rank{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+ /* -----------------------------------------------------PAGE----Certificate ---- */
+.certificate {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.certificate__title, .schedule__title, .events__title, .teacher__title {
+    font-family: Hind Siliguri, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 58px;
+    /* letter-spacing: 0em; */
+    text-align: center;
+    color:rgba(35, 35, 35, 1);
+}
+.title {
+    margin-bottom: 50px;
+}
+.certificate__body, .events__body, .schedule__body, .teacher__body {
+    padding-bottom: 80px;
+    margin-left: 81px;
+    margin-right: 80px;
+}
+
+.body-certificate__items {
+    display: grid;
+    margin: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    gap: 25px;
+}
+.item__image {
+    border-radius: 20px;
+    position: absolute;
+    width: 472px;
+    min-height: 283px;
+    
+}
+img {
+    transition: transform 0.25s;
+  }
+.body-certificate__item:hover img {
+    transform: scale(1.2);
+}
+/* -----------------------------------------------------PAGE----------EVENTS---- */
+
+.page__events {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 800px;
+}
+.events {
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+.__container {
+    position: absolute;
+    width: 410px;
+    height: 698px;
+}
+.events__container {
+    padding: 81px;
+    padding:11px 8px 12px 10px;
+}
+.events__items {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 24px;
+    row-gap: 12px;
+}
+.events__item {
+    display: grid;
+    grid-template-rows: [start] 1fr [row3] 1fr [row-end];
+    grid-template-columns:  [start] 1fr [row3] 1fr [row-end];
+    background: #FFFFFF;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.item-event {
+    width: 410px;
+    height: 698px;
+    border-radius: 10px;
+    
+}
+.item-image {
+    position: relative;
+    width: 387px;
+    height: 433px;
+}
+
+.event__title {
+    font-family: Hind Siliguri;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: left;
+    color: rgba(158, 48, 64, 1);
+
+    height: 78px;
+    width: 265px;
+    margin-left: 20px;
+    /* top: 3724px; */
+    
+}
+.event__title:hover {
+    color: orange;
+}
+.item__abstract {
+    font-family: Open Sans, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23.15px;
+    /* letter-spacing: 0em; */
+    text-align: left;
+    color: rgba(48, 48, 48, 1);
+
+    height: 125px;
+    width: 373px;
+    margin-left: 20px;
+    /* top: 3815px; */
+
+}
+
+/* -----------------------------------------------------PAGE----SHEDULE ---- */
+
+.schedule__items {
+    align-content: center;
+    padding: 0px 15px 80px;
+}
+.schedule__item {
+    margin-left: 81px;
+    margin-bottom: 80px;
+    background: rgba(217, 217, 217, 1);
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ------------------#F3F5F6-----------------------------------FOOTER---- */
+
+.footer {
+    background: rgba(243, 245, 246, 1);
+    padding-top: 60px;
+    padding-bottom: 68px;       /*  payments */
+    max-height: 385px;
+}
+
+.footer__body {
+    display: flex;
+    gap: 30px;
+}
+
+.body-footer__column {
+    flex: 0 1 33.333%;
+}
+
+.menu-footer {
+    gap: 80px;
+    margin-left: 80px;
+}
+
+
+.contacts-footer__link {
+    color: rgba(48, 48, 48, 1);
+    display: inline-block;
+    line-height: 29px;
+    padding-left: 30px;
+}
+.contacts-footer__link-location {
+    background: url('../img/footer/contact/1-location.svg') top left no-repeat;
+}
+.contacts-footer__link-fone {
+    background: url('../img/footer/contact/2-fone.svg') left no-repeat;
+}
+.contacts-footer__link-mail {
+    background: url('../img/footer/contact/3-mail.svg') left no-repeat;
+}
+.payment-footer {
+    margin-right: 80px;
+}
+
+.body-footer__title {
+    font-family: Hind Siliguri;
+    color: rgba(35,35,35,1);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.body-footer {
+    font-family: Open Sans;
+    color: rgba(48, 48, 48, 1);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+/* ----------------------------------------------------------PAYMENTS---- */
+.body-footer__payment {
+    position: absolute;
+    width: 360.18px;
+    height: 257px;
+    margin-bottom: 68px;
+    margin-right: 80px;
+}
+
+.payment-footer__items {
+    padding-bottom: 40p x;
+
+}
+.payment-footer__item {
+    /* position: absolute; */
+    padding-right: 20px;
+    padding-bottom: 30px;
+    width: 62.97px;
+    height: 40.84px;
+    border-radius: 20px;
+    /* background: rgba(196, 196, 196, 1) */
+    
+}
